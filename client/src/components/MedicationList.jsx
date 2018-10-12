@@ -1,10 +1,21 @@
 import React from 'react';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 import { connect } from 'react-redux';
+import { deleteMeds } from '../redux/actions';
 
 const MedicationList = (props) => {
 
-    var listOfMedications = props.meds.map((meds) => <ListGroupItem key={meds.id} className="list-group-item-button">{meds.name}  <button type="button" class="btn btn-danger button-position">Delete</button></ListGroupItem>)
+    var deleteFromMedsList = (e) => {
+        e.preventDefault()
+        console.log('test')
+        return props.deleteMeds(this.state)
+    }
+
+    var listOfMedications = props.meds.map((meds) => 
+    <ListGroupItem key={meds.id} className="list-group-item-button">
+    {meds.name} 
+    <button onClick={props.deleteFromMedsList} class="btn btn-danger button-position">Delete</button>
+    </ListGroupItem>)
     
     // var listOfUses = props.meds.map((meds) => <ListGroupItem key={meds.id}>{meds.about}</ListGroupItem>)
 
@@ -29,4 +40,4 @@ const mapStateToProps = state => {
     })
 }
 
-export default connect(mapStateToProps)(MedicationList)
+export default connect(mapStateToProps, { deleteMeds })(MedicationList)

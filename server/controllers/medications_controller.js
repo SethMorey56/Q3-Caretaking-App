@@ -18,5 +18,11 @@ module.exports = {
         }).then((result) => {
             res.json(req.body)
         })
+    },
+
+    deleteMedications: function(req, res) {
+        knex('medication').where(medication.id, req.params.id).del().then(() => {
+            res.json(req.params.id)
+        })
     }
 }
