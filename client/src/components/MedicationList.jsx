@@ -5,17 +5,18 @@ import { deleteMeds } from '../redux/actions';
 
 const MedicationList = (props) => {
 
-    var deleteFromMedsList = (e) => {
-        e.preventDefault()
+    var deleteFromMedsList = (id) => {
         console.log('test')
-        return props.deleteMeds(this.state)
+        return props.deleteMeds(id)
     }
 
     var listOfMedications = props.meds.map((meds) => 
     <ListGroupItem key={meds.id} className="list-group-item-button">
     {meds.name} 
-    <button onClick={props.deleteFromMedsList} class="btn btn-danger button-position">Delete</button>
+    <button onClick={() => deleteFromMedsList(meds.id)} className="btn btn-danger button-position">Delete</button>
     </ListGroupItem>)
+
+    console.log(listOfMedications)
     
     // var listOfUses = props.meds.map((meds) => <ListGroupItem key={meds.id}>{meds.about}</ListGroupItem>)
 

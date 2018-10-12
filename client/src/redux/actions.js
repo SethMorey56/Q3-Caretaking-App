@@ -36,9 +36,9 @@ export const postMeds = (med) => {
 }
 // meds (above) is this.state in the PostMeds function in MedListFrom
 
-export const deleteMeds = (med) => {
+export const deleteMeds = (id) => {
     return dispatch => {
-        axios.delete('http://localhost:8000/medications', med).then(response => dispatch({
+        axios.delete(`http://localhost:8000/medications/${id}`).then(response => dispatch({
             type: DELETE_MEDICATIONS_SUCCESS,
             payload: response.data
         }))

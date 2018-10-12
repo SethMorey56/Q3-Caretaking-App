@@ -12,7 +12,7 @@ module.exports = function(app){
   // Medications controllers
   app.get('/medications', medications_controller.getMedications)
   app.post('/medications', medications_controller.postMedications)
-  app.delete('/medications', medications_controller.deleteMedications)
+  app.delete('/medications/:id', medications_controller.deleteMedications)
   // Patients controllers
   app.get('/patients', patients_controller.patients)
 }
