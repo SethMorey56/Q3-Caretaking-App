@@ -15,8 +15,8 @@ module.exports = {
             frequency: req.body.frequency,
             instruction: req.body.instruction,
             about: req.body.about
-        }).then((result) => {
-            res.json(req.body)
+        }, '*').then((result) => {
+            res.json(result[0])
         })
     },
 
