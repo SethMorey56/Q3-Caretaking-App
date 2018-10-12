@@ -9,7 +9,7 @@ const MedicationList = (props) => {
         console.log('test')
         return props.deleteMeds(id)
     }
-
+    
     var listOfMedications = props.meds.map((meds) => 
     <ListGroupItem key={meds.id} className="list-group-item-button">
     {meds.name} 

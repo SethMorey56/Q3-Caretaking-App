@@ -27,10 +27,10 @@ class MedListForm extends Component {
             <h1> Add a Medication </h1>
             <Form onSubmit={this.addToMedsList}>
                 <Input onChange={e => this.setState({name: e.target.value})} placeholder="Name" bsSize="lg"/>
-                <Input onChange={e => this.setState({dosage: e.target.value})} placeholder="Dosage (num)" bsSize="lg"/>
-                <Input onChange={e => this.setState({frequency: e.target.value})}placeholder="Frequency (num)" bsSize="lg"/>
-                <Input onChange={e => this.setState({instruction: e.target.value})}placeholder="Instruction (num)" bsSize="lg"/>
-                <Input onChange={e => this.setState({about: e.target.value})}placeholder="About (num)" bsSize="lg"/>
+                <Input type="number" onChange={e => this.setState({dosage: e.target.value})} placeholder="Dosage (num)" bsSize="lg"/>
+                <Input type="number" onChange={e => this.setState({frequency: e.target.value})}placeholder="Frequency (num)" bsSize="lg"/>
+                <Input onChange={e => this.setState({instruction: e.target.value})}placeholder="Instruction" bsSize="lg"/>
+                <Input onChange={e => this.setState({about: e.target.value})}placeholder="About" bsSize="lg"/>
                 <Button className="med-list-form-button" type="submit"
                 color="primary">Add
                 </Button>

@@ -57,3 +57,30 @@
   right: -80px;
   bottom: 5px
 }
+
+.logs-h1 {
+  text-align: center;
+}
+
+.logs-input {
+  width: 80%;
+  padding-left: 20%;
+  height: 500px;
+}
+
+.log-list {
+  width: 95%;
+  padding-left: 5%;
+}
+
+.login-h1 {
+  text-align: center;
+}
+
+.homepage-card {
+  padding: 20%;
+}
+
+.login-button {
+  width: 80%;
+}

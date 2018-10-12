@@ -1,7 +1,8 @@
 import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
-import MedTable from './MedTable';
+import MondayTable from './MondayTable';
+import TuesdayTable from './TuesdayTabel';
 
 export default class DailyTabs extends React.Component {
   constructor(props) {
@@ -99,7 +100,7 @@ export default class DailyTabs extends React.Component {
             <Row>
               <Col sm="12">
                 <Card body>
-                  <MedTable/>
+                  <MondayTable/>
                 </Card>
               </Col>
             </Row>
@@ -108,7 +109,7 @@ export default class DailyTabs extends React.Component {
             <Row>
               <Col sm="12">
                 <Card body>
-                <MedTable/>
+                <TuesdayTable/>
                 </Card>
               </Col>
               {/* <Col sm="6">
@@ -123,7 +124,7 @@ export default class DailyTabs extends React.Component {
             <Row>
               <Col sm="12">
                 <Card body>
-                <MedTable/>
+                {/* <MedTable/> */}
                 </Card>
               </Col>
             </Row>

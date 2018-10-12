@@ -6,7 +6,7 @@ let initialState = []
 export default (state = initialState, action) => {
     switch (action.type) {
         case FETCH_MEDICATIONS_SUCCESS:
-            return action.payload
+            return action.payload;
         case FETCH_MEDICATIONS_FAILED:
             return state
         case POST_MEDICATIONS_SUCCESS:

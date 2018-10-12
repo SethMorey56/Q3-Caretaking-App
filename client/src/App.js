@@ -1,22 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
-import MedicationList from './components/MedicationList';
-import NavBar from './components/TopNav';
-import MedListForm from './components/MedListForm';
-import DailyTabs from './components/DailyTabs';
-
-import MedTable from './components/MedTable';
+import HomePage from './components/HomePage';
+import MedicinePage from './components/MedicinePage';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
+      <Router>
       <React.Fragment>
-      <NavBar/>
-      <DailyTabs/>
-      <MedicationList/>
-      <MedListForm/>
-      <MedTable/>
+        <Route path='/home' component={HomePage}/>
+        <Route path='/medicine' component={MedicinePage}/>
       </React.Fragment>
+      </Router>
     );
   }
 }

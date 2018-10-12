@@ -1,7 +1,8 @@
 import React from 'react';
 import { Table } from 'reactstrap';
 
-const MedTable = () => {
+const TuesdayTable = (meds) => {
+
     return (
         <div className="med-table">
             <Table>
@@ -18,27 +19,27 @@ const MedTable = () => {
             <tbody>
             <tr>
                 <th scope="row"></th>
-                <td> Drug 1 </td>
-                <td> (mg) </td>
-                <td> per day </td>
-                <td> how to take </td>
-                <td> what is it for</td>
+                <td> Drug 3 </td>
+                <td> 25 (mg) </td>
+                <td> 3 per day </td>
+                <td> lots of alcohol </td>
+                <td> carpel tunnel </td>
             </tr>
             <tr>
                 <th scope="row"></th>
                 <td> Drug 2 </td>
-                <td> (mg) </td>
-                <td> per day </td>
-                <td> how to take </td>
+                <td> 10 (mg) </td>
+                <td> 1 per day </td>
+                <td> after breakfast </td>
                 <td> what is it for</td>
             </tr>
             <tr>
                 <th scope="row"></th>
-                <td> Drug 3 </td>
-                <td> (mg) </td>
-                <td> per day </td>
-                <td> how to take </td>
-                <td> what is it for</td>
+                <td> Drug 1 </td>
+                <td> 5 (mg) </td>
+                <td> 5 per day </td>
+                <td> lots of fluids </td>
+                <td> sore throat </td>
             </tr>
             </tbody>
         </Table>
@@ -46,4 +47,4 @@ const MedTable = () => {
     )
 }
 
-export default MedTable
+export default TuesdayTable
