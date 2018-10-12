@@ -21,7 +21,7 @@ module.exports = {
     },
 
     deleteMedications: function(req, res) {
-        knex('medication').where(medication.id, req.params.id).del().then(() => {
+        knex('medication').where('id', req.params.id).del().then(() => {
             res.json(req.params.id)
         })
     }
